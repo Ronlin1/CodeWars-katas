@@ -1,13 +1,26 @@
-# Welcome. In this kata, you are asked to square every digit of a number and concatenate them.
-#
-# For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1.
-# 
-# Note: The function accepts an integer and returns an integer
-
 num = 9119
 def square_digits(num):
+    new = str(num)
     ans = []
-    for int(n) in str(num):
+    for n in new:
+        print('n ', type(n))
+        n = int(n)
         ans.append(n**2)
-    return ans
-square_digits(num)
+        strings = [str(integer) for integer in ans]
+        a_string = "".join(strings)
+        an_integer = int(a_string)
+        # ans =str(ans)
+
+
+    # for n in num:
+    #     ans.append(n**2)
+    return an_integer
+print(square_digits(9119))
+
+# Alternative Soln
+
+def square_digits(num):
+    ret = ""
+    for x in str(num):
+        ret += str(int(x)**2)
+    return int(ret)
