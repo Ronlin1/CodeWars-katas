@@ -17,3 +17,7 @@ def array_diff(list_1, list_2):
     return diff
 
 print(array_diff([1,2,3,4],[1,2,6]))
+
+# Alternative 4 Pros
+def array_diff(a, b):
+    return [x for x in a if x not in b]
