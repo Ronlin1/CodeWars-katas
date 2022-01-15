@@ -24,3 +24,7 @@ def open_or_senior(data):
     return new
 
 print(open_or_senior(output))
+
+# For Pros >>
+def openOrSenior(data):
+  return ["Senior" if age >= 55 and handicap >= 7 else "Open" for (age, handicap) in data]
